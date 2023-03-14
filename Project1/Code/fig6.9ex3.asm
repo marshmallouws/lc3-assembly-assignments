@@ -1,0 +1,19 @@
+	.ORIG x3000
+	AND R0, R0, #0
+	ADD R0, R0, #1
+	AND R1, R1, #0
+	ADD R1, R1, #-5
+	AND R3, R3, #0
+	ADD R3, R3, #10
+	LD	R4, L1
+	LDR R2, R4, #0
+L3	ADD R2, R2, R1
+	BRz L2
+	ADD R4, R4, #1
+	ADD R3, R3, #-1
+	LDR R2, R4, #0
+	BRp	L3
+	AND R0, R0, #0
+L2	HALT
+L1	.FILL x3100
+	.END

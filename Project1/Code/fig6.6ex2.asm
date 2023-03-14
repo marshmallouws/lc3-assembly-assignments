@@ -1,0 +1,12 @@
+	.ORIG x3000
+	AND R1, R1, #0
+	AND R4, R4, #0
+	ADD R4, R4, #10
+	LD R2, xFC ; R2<- M[x3100]
+L1	LDR R3, R2, #0
+	ADD R2, R2, #1
+	ADD R1, R1, R3
+	ADD R4, R4, #-1
+	BRp L1
+	HALT
+	.END
