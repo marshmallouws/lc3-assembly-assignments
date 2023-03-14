@@ -18,8 +18,8 @@ readS
         ADD R3, R3, 0 ; If counter for outer loop is 0, we will run inner loop
         BRnz SKIP
             
-            ADD R4, R4, 0 ; Mulloop counter
-            LD R5, mul10 ; Loop 10 times
+            ADD R4, R4, 1 ; Mulloop counter
+            LD R5, #10 ; Loop 10 times
             MULLOOP ; loop to multiply
                 
                 ADD R0, R0, #1
